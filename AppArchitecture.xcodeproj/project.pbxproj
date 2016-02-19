@@ -9,6 +9,10 @@
 /* Begin PBXBuildFile section */
 		B5166A48F9C43F1CD21FC5CA /* Pods_AppArchitecture.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D1E4855B57F7B21318021FEF /* Pods_AppArchitecture.framework */; };
 		F01F8CC01C6E263100F65D64 /* libAFNetworking.a in Frameworks */ = {isa = PBXBuildFile; fileRef = F01F8CBF1C6E263100F65D64 /* libAFNetworking.a */; };
+		F0261CA11C74AD3500478E62 /* Repository.swift in Sources */ = {isa = PBXBuildFile; fileRef = F0261CA01C74AD3500478E62 /* Repository.swift */; };
+		F0261CA41C74AFD400478E62 /* TestWebService.swift in Sources */ = {isa = PBXBuildFile; fileRef = F0261CA31C74AFD300478E62 /* TestWebService.swift */; };
+		F0261CA61C74B0D800478E62 /* WebService.swift in Sources */ = {isa = PBXBuildFile; fileRef = F0261CA51C74B0D800478E62 /* WebService.swift */; };
+		F0261CA91C74B36C00478E62 /* TestModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = F0261CA81C74B36C00478E62 /* TestModel.swift */; };
 		F06880741C6E2FA500A50879 /* HTTPResponseHandler.swift in Sources */ = {isa = PBXBuildFile; fileRef = F06880731C6E2FA500A50879 /* HTTPResponseHandler.swift */; };
 		F06880761C6E304300A50879 /* HTTPRequestError.swift in Sources */ = {isa = PBXBuildFile; fileRef = F06880751C6E304300A50879 /* HTTPRequestError.swift */; };
 		F0A472541C6E132B00884258 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = F0A472531C6E132B00884258 /* AppDelegate.swift */; };
@@ -44,6 +48,10 @@
 		D1E4855B57F7B21318021FEF /* Pods_AppArchitecture.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_AppArchitecture.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		E105AFF59E0CDF209608B084 /* Pods-AppArchitecture.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-AppArchitecture.release.xcconfig"; path = "Pods/Target Support Files/Pods-AppArchitecture/Pods-AppArchitecture.release.xcconfig"; sourceTree = "<group>"; };
 		F01F8CBF1C6E263100F65D64 /* libAFNetworking.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = libAFNetworking.a; path = "Pods/../build/Debug-iphoneos/libAFNetworking.a"; sourceTree = "<group>"; };
+		F0261CA01C74AD3500478E62 /* Repository.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Repository.swift; path = Repository/Repository.swift; sourceTree = "<group>"; };
+		F0261CA31C74AFD300478E62 /* TestWebService.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = TestWebService.swift; path = WebService/TestWebService.swift; sourceTree = "<group>"; };
+		F0261CA51C74B0D800478E62 /* WebService.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WebService.swift; sourceTree = "<group>"; };
+		F0261CA81C74B36C00478E62 /* TestModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = TestModel.swift; path = Model/TestModel.swift; sourceTree = "<group>"; };
 		F06880731C6E2FA500A50879 /* HTTPResponseHandler.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = HTTPResponseHandler.swift; path = Networking/HTTPResponseHandler.swift; sourceTree = SOURCE_ROOT; };
 		F06880751C6E304300A50879 /* HTTPRequestError.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = HTTPRequestError.swift; path = Networking/HTTPRequestError.swift; sourceTree = SOURCE_ROOT; };
 		F0A472501C6E132B00884258 /* AppArchitecture.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = AppArchitecture.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -108,6 +116,31 @@
 			name = Pods;
 			sourceTree = "<group>";
 		};
+		F0261C9F1C74AD1C00478E62 /* Repository */ = {
+			isa = PBXGroup;
+			children = (
+				F0261CA01C74AD3500478E62 /* Repository.swift */,
+			);
+			name = Repository;
+			sourceTree = "<group>";
+		};
+		F0261CA21C74AFB900478E62 /* WebService */ = {
+			isa = PBXGroup;
+			children = (
+				F0261CA31C74AFD300478E62 /* TestWebService.swift */,
+				F0261CA51C74B0D800478E62 /* WebService.swift */,
+			);
+			name = WebService;
+			sourceTree = "<group>";
+		};
+		F0261CA71C74B35400478E62 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				F0261CA81C74B36C00478E62 /* TestModel.swift */,
+			);
+			name = Model;
+			sourceTree = "<group>";
+		};
 		F0A472471C6E132B00884258 = {
 			isa = PBXGroup;
 			children = (
@@ -133,6 +166,9 @@
 		F0A472521C6E132B00884258 /* AppArchitecture */ = {
 			isa = PBXGroup;
 			children = (
+				F0261CA71C74B35400478E62 /* Model */,
+				F0261CA21C74AFB900478E62 /* WebService */,
+				F0261C9F1C74AD1C00478E62 /* Repository */,
 				F0A472841C6E242600884258 /* Networking */,
 				F0A472531C6E132B00884258 /* AppDelegate.swift */,
 				F0A472551C6E132B00884258 /* ViewController.swift */,
@@ -355,11 +391,15 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				F0261CA61C74B0D800478E62 /* WebService.swift in Sources */,
+				F0261CA11C74AD3500478E62 /* Repository.swift in Sources */,
 				F06880741C6E2FA500A50879 /* HTTPResponseHandler.swift in Sources */,
 				F0A472561C6E132B00884258 /* ViewController.swift in Sources */,
 				F0A472861C6E243100884258 /* HTTPRequestManager.swift in Sources */,
 				F0A472541C6E132B00884258 /* AppDelegate.swift in Sources */,
 				F06880761C6E304300A50879 /* HTTPRequestError.swift in Sources */,
+				F0261CA91C74B36C00478E62 /* TestModel.swift in Sources */,
+				F0261CA41C74AFD400478E62 /* TestWebService.swift in Sources */,
 				F0A4725C1C6E132B00884258 /* AppArchitecture.xcdatamodeld in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
