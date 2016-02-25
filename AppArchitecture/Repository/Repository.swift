@@ -8,9 +8,9 @@
 
 import Foundation
 
-class Repository<T: WebService>{
+class Repository{
     
-    func get(webService: T, params:[String:String]? = nil, observer: (data: Any?, error: HTTPRequestError?) -> Void) -> Any?{
+    static func get(webService: WebService, params:[String:String]? = nil, observer: (data: Any?, error: HTTPRequestError?) -> Void) -> Any?{
         
         let data = webService.get()
         
@@ -23,7 +23,7 @@ class Repository<T: WebService>{
     }
     
     
-    private func parseResponse(webService: T, observer: (data: Any?, error: HTTPRequestError?) -> Void)(data: Any?, error: HTTPRequestError?){
+    static private func parseResponse(webService: WebService, observer: (data: Any?, error: HTTPRequestError?) -> Void)(data: Any?, error: HTTPRequestError?){
         
         let data = webService.parse(data)
         

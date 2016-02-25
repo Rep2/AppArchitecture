@@ -8,9 +8,9 @@
 
 import Foundation
 
-class TestWebService: WebService{
+class TestWebService: WebServiceHandler{
     
-    let route = "adsads"
+    let route = "https://maps.googleapis.com/maps/api/distancematrix/json?language=hr-HR&key=AIzaSyDRsUm7UbjW0704uQhomf0f76ZS-9gTwB0"
     
     var data: [TestModel]?
     
@@ -18,8 +18,14 @@ class TestWebService: WebService{
         return data
     }
     
-    func parse(data: Any) -> Any {
+    func parseToModel(data: Any) -> Any {
+        print(data)
+        
         return data
+    }
+    
+    func parseFromModel() -> Any {
+        return data ?? []
     }
     
 }

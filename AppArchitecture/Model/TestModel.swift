@@ -9,5 +9,9 @@
 import Foundation
 
 class TestModel{
+    var destination: [Any]
     
+    init(destination:[Any]){
+        self.destination = destination
+    }
 }
