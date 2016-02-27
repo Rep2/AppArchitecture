@@ -15,6 +15,8 @@ import Foundation
 */
 protocol WebServiceHandler{
     
+    init()
+    
     /// Service endpoint route
     var route: String {get}
     

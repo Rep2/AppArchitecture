@@ -8,20 +8,25 @@
 
 import Foundation
 
-enum WebServiceHandlerName{
-    case TestWebService
-}
-
+/// Locates registered web services
 class WebServiceHandlerLocator{
     
-    static let registeredWebServices: [WebServiceHandlerName : protocol<WebServiceHandler>.Type ] = [
-        WebServiceHandlerName.TestWebService : TestWebService.self
-    ]
+    /// Stores initialized web services
+    static var initializedWebServices = [WebServiceHandlerName : WebServiceHandler?]()
     
-    static var initializedWebServices: [WebServiceHandlerName : WebServiceHandler?] = [:]()
-    
+    /// Returns requested web service. Initializes it if needed
     static func getService(webService: WebServiceHandlerName) -> WebServiceHandler{
-        return registeredWebServices[webService]!
+        
+        if let handler = initializedWebServices[webService]{
+            if let handler = handler{
+                return handler
+            }
+        }
+        
+        let handler = registeredWebServices[webService]!.init()
+        initializedWebServices[webService] = handler
+        
+        return handler
     }
     
 }

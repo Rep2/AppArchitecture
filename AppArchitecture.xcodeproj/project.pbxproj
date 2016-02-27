@@ -25,6 +25,7 @@
 		F0A4726C1C6E132B00884258 /* AppArchitectureTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = F0A4726B1C6E132B00884258 /* AppArchitectureTests.swift */; };
 		F0A472771C6E132B00884258 /* AppArchitectureUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = F0A472761C6E132B00884258 /* AppArchitectureUITests.swift */; };
 		F0A472861C6E243100884258 /* HTTPRequestManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = F0A472851C6E243100884258 /* HTTPRequestManager.swift */; };
+		F0E546F21C80AA67007EEF4E /* WebSeviceRegistration.swift in Sources */ = {isa = PBXBuildFile; fileRef = F0E546F11C80AA67007EEF4E /* WebSeviceRegistration.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -71,6 +72,7 @@
 		F0A472761C6E132B00884258 /* AppArchitectureUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppArchitectureUITests.swift; sourceTree = "<group>"; };
 		F0A472781C6E132B00884258 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		F0A472851C6E243100884258 /* HTTPRequestManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = HTTPRequestManager.swift; path = Networking/HTTPRequestManager.swift; sourceTree = SOURCE_ROOT; };
+		F0E546F11C80AA67007EEF4E /* WebSeviceRegistration.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = WebSeviceRegistration.swift; path = WebService/Base/WebSeviceRegistration.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -123,6 +125,7 @@
 			children = (
 				F0260E451C7F549D009B1817 /* WebServiceHandler.swift */,
 				F0260E461C7F549D009B1817 /* WebServiceLocator.swift */,
+				F0E546F11C80AA67007EEF4E /* WebSeviceRegistration.swift */,
 			);
 			name = Base;
 			sourceTree = "<group>";
@@ -404,6 +407,7 @@
 			files = (
 				F0261CA11C74AD3500478E62 /* Repository.swift in Sources */,
 				F06880741C6E2FA500A50879 /* HTTPResponseHandler.swift in Sources */,
+				F0E546F21C80AA67007EEF4E /* WebSeviceRegistration.swift in Sources */,
 				F0A472561C6E132B00884258 /* ViewController.swift in Sources */,
 				F0A472861C6E243100884258 /* HTTPRequestManager.swift in Sources */,
 				F0A472541C6E132B00884258 /* AppDelegate.swift in Sources */,
