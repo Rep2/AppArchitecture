@@ -8,14 +8,16 @@
 
 import UIKit
 
-class ViewController: UIViewController {
+class UserViewController: UIViewController {
 
+    @IBOutlet weak var table: BasicTable!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
         
-        var data = Repository.get(
-            WebServiceLocator.getService(WebServiceName.TestWebService),
+        var data = Repository.getAll(
+            ResourceHandlerLocator.getService(ResourceHandlerName.User),
             observer: handle)
     }
 

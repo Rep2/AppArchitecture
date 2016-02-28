@@ -8,10 +8,7 @@
 
 import Foundation
 
-class TestModel{
-    var destination: [Any]
-    
-    init(destination:[Any]){
-        self.destination = destination
-    }
+struct UserModel{
+    let id: Int
+    let email: String
 }

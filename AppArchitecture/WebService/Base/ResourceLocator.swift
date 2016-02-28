@@ -9,22 +9,22 @@
 import Foundation
 
 /// Locates registered web services
-class WebServiceHandlerLocator{
+class ResourceHandlerLocator{
     
     /// Stores initialized web services
-    static var initializedWebServices = [WebServiceHandlerName : WebServiceHandler?]()
+    static var initializedResources = [ResourceHandlerName : ResourceHandler?]()
     
     /// Returns requested web service. Initializes it if needed
-    static func getService(webService: WebServiceHandlerName) -> WebServiceHandler{
+    static func getService(resource: ResourceHandlerName) -> ResourceHandler{
         
-        if let handler = initializedWebServices[webService]{
+        if let handler = initializedResources[resource]{
             if let handler = handler{
                 return handler
             }
         }
         
-        let handler = registeredWebServices[webService]!.init()
-        initializedWebServices[webService] = handler
+        let handler = registeredResources[resource]!.init()
+        initializedResources[resource] = handler
         
         return handler
     }
