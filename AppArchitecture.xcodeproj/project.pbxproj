@@ -19,11 +19,13 @@
 		AD9096951C8365A600177F61 /* CellModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = AD9096881C8365A600177F61 /* CellModel.swift */; };
 		AD9096961C8365A600177F61 /* BasicTable.swift in Sources */ = {isa = PBXBuildFile; fileRef = AD90968A1C8365A600177F61 /* BasicTable.swift */; };
 		AD9096971C8365A600177F61 /* TableWithRefresh.swift in Sources */ = {isa = PBXBuildFile; fileRef = AD90968B1C8365A600177F61 /* TableWithRefresh.swift */; };
+		AD9096991C83B01500177F61 /* ResourceLocatorTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = AD9096981C83B01500177F61 /* ResourceLocatorTest.swift */; };
+		AD90969B1C83B30B00177F61 /* HTTPRequestManagerTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = AD90969A1C83B30B00177F61 /* HTTPRequestManagerTest.swift */; };
 		B5166A48F9C43F1CD21FC5CA /* Pods_AppArchitecture.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D1E4855B57F7B21318021FEF /* Pods_AppArchitecture.framework */; };
 		F0260E471C7F549D009B1817 /* ResourceHandler.swift in Sources */ = {isa = PBXBuildFile; fileRef = F0260E451C7F549D009B1817 /* ResourceHandler.swift */; };
-		F0260E481C7F549D009B1817 /* ResourceLocator.swift in Sources */ = {isa = PBXBuildFile; fileRef = F0260E461C7F549D009B1817 /* ResourceLocator.swift */; };
+		F0260E481C7F549D009B1817 /* ResourceHandlerLocator.swift in Sources */ = {isa = PBXBuildFile; fileRef = F0260E461C7F549D009B1817 /* ResourceHandlerLocator.swift */; };
 		F0261CA11C74AD3500478E62 /* Repository.swift in Sources */ = {isa = PBXBuildFile; fileRef = F0261CA01C74AD3500478E62 /* Repository.swift */; };
-		F0261CA41C74AFD400478E62 /* UserResource.swift in Sources */ = {isa = PBXBuildFile; fileRef = F0261CA31C74AFD300478E62 /* UserResource.swift */; };
+		F0261CA41C74AFD400478E62 /* UserResourceHandler.swift in Sources */ = {isa = PBXBuildFile; fileRef = F0261CA31C74AFD300478E62 /* UserResourceHandler.swift */; };
 		F0261CA91C74B36C00478E62 /* TestModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = F0261CA81C74B36C00478E62 /* TestModel.swift */; };
 		F06880741C6E2FA500A50879 /* HTTPResponseHandler.swift in Sources */ = {isa = PBXBuildFile; fileRef = F06880731C6E2FA500A50879 /* HTTPResponseHandler.swift */; };
 		F06880761C6E304300A50879 /* HTTPRequestError.swift in Sources */ = {isa = PBXBuildFile; fileRef = F06880751C6E304300A50879 /* HTTPRequestError.swift */; };
@@ -70,13 +72,15 @@
 		AD9096881C8365A600177F61 /* CellModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CellModel.swift; sourceTree = "<group>"; };
 		AD90968A1C8365A600177F61 /* BasicTable.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BasicTable.swift; sourceTree = "<group>"; };
 		AD90968B1C8365A600177F61 /* TableWithRefresh.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TableWithRefresh.swift; sourceTree = "<group>"; };
+		AD9096981C83B01500177F61 /* ResourceLocatorTest.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ResourceLocatorTest.swift; sourceTree = "<group>"; };
+		AD90969A1C83B30B00177F61 /* HTTPRequestManagerTest.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HTTPRequestManagerTest.swift; sourceTree = "<group>"; };
 		D1E4855B57F7B21318021FEF /* Pods_AppArchitecture.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_AppArchitecture.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		E105AFF59E0CDF209608B084 /* Pods-AppArchitecture.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-AppArchitecture.release.xcconfig"; path = "Pods/Target Support Files/Pods-AppArchitecture/Pods-AppArchitecture.release.xcconfig"; sourceTree = "<group>"; };
 		F01F8CBF1C6E263100F65D64 /* libAFNetworking.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = libAFNetworking.a; path = "Pods/../build/Debug-iphoneos/libAFNetworking.a"; sourceTree = "<group>"; };
 		F0260E451C7F549D009B1817 /* ResourceHandler.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = ResourceHandler.swift; path = WebService/Base/ResourceHandler.swift; sourceTree = "<group>"; };
-		F0260E461C7F549D009B1817 /* ResourceLocator.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = ResourceLocator.swift; path = WebService/Base/ResourceLocator.swift; sourceTree = "<group>"; };
+		F0260E461C7F549D009B1817 /* ResourceHandlerLocator.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = ResourceHandlerLocator.swift; path = WebService/Base/ResourceHandlerLocator.swift; sourceTree = "<group>"; };
 		F0261CA01C74AD3500478E62 /* Repository.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Repository.swift; path = Repository/Repository.swift; sourceTree = "<group>"; };
-		F0261CA31C74AFD300478E62 /* UserResource.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = UserResource.swift; path = WebService/UserResource.swift; sourceTree = "<group>"; };
+		F0261CA31C74AFD300478E62 /* UserResourceHandler.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = UserResourceHandler.swift; path = WebService/UserResourceHandler.swift; sourceTree = "<group>"; };
 		F0261CA81C74B36C00478E62 /* TestModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = TestModel.swift; path = Model/TestModel.swift; sourceTree = "<group>"; };
 		F06880731C6E2FA500A50879 /* HTTPResponseHandler.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = HTTPResponseHandler.swift; path = Networking/HTTPResponseHandler.swift; sourceTree = SOURCE_ROOT; };
 		F06880751C6E304300A50879 /* HTTPRequestError.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = HTTPRequestError.swift; path = Networking/HTTPRequestError.swift; sourceTree = SOURCE_ROOT; };
@@ -146,7 +150,7 @@
 			isa = PBXGroup;
 			children = (
 				F0260E451C7F549D009B1817 /* ResourceHandler.swift */,
-				F0260E461C7F549D009B1817 /* ResourceLocator.swift */,
+				F0260E461C7F549D009B1817 /* ResourceHandlerLocator.swift */,
 			);
 			name = Generic;
 			sourceTree = "<group>";
@@ -247,7 +251,7 @@
 			isa = PBXGroup;
 			children = (
 				F0260E441C7F546B009B1817 /* Base */,
-				F0261CA31C74AFD300478E62 /* UserResource.swift */,
+				F0261CA31C74AFD300478E62 /* UserResourceHandler.swift */,
 			);
 			name = WebService;
 			sourceTree = "<group>";
@@ -306,6 +310,8 @@
 			children = (
 				F0A4726B1C6E132B00884258 /* AppArchitectureTests.swift */,
 				F0A4726D1C6E132B00884258 /* Info.plist */,
+				AD9096981C83B01500177F61 /* ResourceLocatorTest.swift */,
+				AD90969A1C83B30B00177F61 /* HTTPRequestManagerTest.swift */,
 			);
 			path = AppArchitectureTests;
 			sourceTree = "<group>";
@@ -529,10 +535,10 @@
 				AD90968F1C8365A600177F61 /* SingleLabelWithImageCell.swift in Sources */,
 				AD9096971C8365A600177F61 /* TableWithRefresh.swift in Sources */,
 				AD90968C1C8365A600177F61 /* GenericCellImplementation.swift in Sources */,
-				F0260E481C7F549D009B1817 /* ResourceLocator.swift in Sources */,
+				F0260E481C7F549D009B1817 /* ResourceHandlerLocator.swift in Sources */,
 				AD9096961C8365A600177F61 /* BasicTable.swift in Sources */,
 				F0261CA91C74B36C00478E62 /* TestModel.swift in Sources */,
-				F0261CA41C74AFD400478E62 /* UserResource.swift in Sources */,
+				F0261CA41C74AFD400478E62 /* UserResourceHandler.swift in Sources */,
 				F0260E471C7F549D009B1817 /* ResourceHandler.swift in Sources */,
 				F0A4725C1C6E132B00884258 /* AppArchitecture.xcdatamodeld in Sources */,
 			);
@@ -542,7 +548,9 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				AD9096991C83B01500177F61 /* ResourceLocatorTest.swift in Sources */,
 				F0A4726C1C6E132B00884258 /* AppArchitectureTests.swift in Sources */,
+				AD90969B1C83B30B00177F61 /* HTTPRequestManagerTest.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

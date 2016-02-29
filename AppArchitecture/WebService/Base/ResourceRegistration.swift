@@ -17,5 +17,5 @@ enum ResourceHandlerName{
 
 /// After registration assign class to registered handler
 let registeredResources: [ResourceHandlerName : protocol<ResourceHandler>.Type ] = [
-    ResourceHandlerName.User : UserResource.self
+    ResourceHandlerName.User : UserResourceHandler.self
 ]

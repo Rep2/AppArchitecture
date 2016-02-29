@@ -8,7 +8,16 @@
 
 import Foundation
 
-struct UserModel{
+class Model{
+
+}
+
+class UserModel : Model{
     let id: Int
     let email: String
+    
+    init(id: Int, email: String){
+        self.id = id
+        self.email = email
+    }
 }

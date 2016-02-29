@@ -11,7 +11,11 @@ import Foundation
 enum HTTPRequestError: ErrorType{
     
     case NoInternetConnection
+    
     case StatusCode(Int)
+    
     case UnvalidResponse
+    
+    case NoDataOnSuccess
     
 }

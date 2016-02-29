@@ -12,9 +12,9 @@ import Foundation
 class HTTPResponseHandler{
     
     /// Observer func
-    let listener: ((data: Any?, error: HTTPRequestError?) -> Void)?
+    let listener: ((data: AnyObject?, error: HTTPRequestError?) -> Void)?
     
-    init(listener: ((data: Any?, error: HTTPRequestError?) -> Void)? = nil){
+    init(listener: ((data: AnyObject?, error: HTTPRequestError?) -> Void)? = nil){
         self.listener = listener
     }
     

@@ -30,7 +30,7 @@ class HTTPRequestManager{
      - parameter params: Dicitionary containing parameters
      - parameter observer: Observer function
     */
-    func get(route:String, params:[String:String]? = nil, observer: ((data: Any?, error: HTTPRequestError?) -> Void)? = nil){
+    func get(route:String, params:[String:String]? = nil, observer: ((data: AnyObject?, error: HTTPRequestError?) -> Void)? = nil){
         
         let responseHandler = HTTPResponseHandler(listener: observer)
         
@@ -48,7 +48,7 @@ class HTTPRequestManager{
      - parameter params: Dicitionary containing parameters
      - parameter observer: Observer function
      */
-    func post(route:String, params:[String:String]? = nil, observer: ((data: Any?, error: HTTPRequestError?) -> Void)? = nil){
+    func post(route:String, params:[String:String]? = nil, observer: ((data: AnyObject?, error: HTTPRequestError?) -> Void)? = nil){
         
         let responseHandler = HTTPResponseHandler(listener: observer)
         

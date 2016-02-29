@@ -16,9 +16,9 @@ class UserViewController: UIViewController {
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
         
-        var data = Repository.getAll(
-            ResourceHandlerLocator.getService(ResourceHandlerName.User),
-            observer: handle)
+        if let data = Repository.getAll(ResourceHandlerName.User, observer: handle){
+            setCells(data)
+        }
     }
 
     override func didReceiveMemoryWarning() {
@@ -27,7 +27,29 @@ class UserViewController: UIViewController {
     }
     
     func handle(data: Any?, error: HTTPRequestError?){
-        print(data)
+
+        if let data = data as? [Model]{
+            setCells(data)
+        }
+    }
+    
+    func setCells(data: [Model]){
+        
+        var cells = [CellModel]()
+        
+        for entity in data{
+            if let entity = entity as? UserModel{
+                cells.append(
+                    CellModel(
+                        cellIdentifier: CellIdentifiers.TwoLabelRightDetail.rawValue,
+                        data: [CellElementIdentifiers.FirstLabel : String(entity.id),
+                            CellElementIdentifiers.SecondLabel: entity.email]
+                    ))
+            }
+        }
+        
+        table.sections = [CellSection(title: nil, cells: cells)]
+        table.reloadData()
     }
 
 

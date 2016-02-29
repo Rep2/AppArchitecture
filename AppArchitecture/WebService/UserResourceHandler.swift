@@ -8,7 +8,7 @@
 
 import Foundation
 
-class UserResource: ResourceHandler{
+class UserResourceHandler: ResourceHandler{
     
     let route = baseHTTPRoute + "user"
     
@@ -18,11 +18,11 @@ class UserResource: ResourceHandler{
         
     }
     
-    func getAll() -> Any? {
+    func getAll() -> [Model]? {
         return storedModels
     }
     
-    func get(id: Int) -> Any? {
+    func get(id: Int) -> Model? {
         if let models = storedModels{
             return models.filter({$0.id == id}).first
         }
@@ -30,12 +30,13 @@ class UserResource: ResourceHandler{
         return nil
     }
     
-    func parseCollectionToModel(data: Any) -> Any {
+    func parseCollectionToModel(data: AnyObject) -> [Model] {
         if storedModels == nil{
             storedModels = []
         }
-        
-        if let dataArray = data as? [[String : Any]]{
+      
+        if let dataArray = data as? [[String : AnyObject]]{
+       
             for entity in dataArray{
                 let parsedEntity = parseEntityToModel(entity)
                 
@@ -44,11 +45,11 @@ class UserResource: ResourceHandler{
                 }
             }
         }
-        
+      
         return storedModels!
     }
     
-    func parseEntityToModel(data: [String : Any]) -> Any?{
+    func parseEntityToModel(data: [String : AnyObject]) -> Model?{
         
         let user = UserModel(
             id: data["id"] as? Int ?? -1,

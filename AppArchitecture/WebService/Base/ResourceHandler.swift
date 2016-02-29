@@ -21,16 +21,16 @@ protocol ResourceHandler{
     var route: String {get}
     
     /// Returns all stored models, if exists
-    func getAll() -> Any?
+    func getAll() -> [Model]?
     
     /// Returns specific model, if exists
-    func get(id: Int) -> Any?
+    func get(id: Int) -> Model?
     
     /// Parses collection from transmission format to object model
-    func parseCollectionToModel(data: Any) -> Any
+    func parseCollectionToModel(data: AnyObject) -> [Model]
     
     /// Parses single entity from transmission format to object model
-    func parseEntityToModel(data: [String : Any]) -> Any?
+    func parseEntityToModel(data: [String : AnyObject]) -> Model?
     
     /// Parses from object model to transmission format
     func parseFromModel() -> Any
